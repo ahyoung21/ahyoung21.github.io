@@ -1,0 +1,71 @@
+title: AY Portfolio
+logo:  'logo.png'
+description: 유아영의 포트폴리오
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://ahyoung21.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+
+
+# Author Settings
+author:
+  name: Ahyoung portfolio
+  image: '/assets/img/01.jpg'
+  job: Markup Developer
+  bio: 안녕하세요, 마크업 개발자 유아영입니다. 웹 표준에 의해 웹 접근성과 크로스 브라우징을 고려하여 Html5, CSS3, JavaScript를 사용해 퍼블리싱을 합니다.
+  email: ahyoung.db@gmail.com
+
+
+# Contact links
+contact:
+  - name: Twitter
+    link: https://twitter.com/
+  - name: Facebook
+    link: https://facebook.com/
+  - name: Instagram
+    link: https://instagram.com/
+
+
+# Comment Section (Disqus)
+disqus-identifier: mr-brown # add your shortname for Disqus Comment. For example mr-brown
+
+
+# Google Analytics
+google-analytics: # add your identifier. For example UA-99631805-1.
+
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+plugins:
+  - jekyll-sitemap
+  - jekyll/tagging
+
+# Pages Path
+defaults:
+  - scope:
+      path: '_pages'
+    values:
+      permalink: /:basename:output_ext
+
+include:
+  - _pages
+
+# Tags
+tag_page_dir:         tag
+tag_page_layout:      tag-page
+tag_permalink_style:  pretty
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+collections:
+  works:
+    output: true
+    permalink: /works/:name/
+
+
+# Exclude from processing.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
