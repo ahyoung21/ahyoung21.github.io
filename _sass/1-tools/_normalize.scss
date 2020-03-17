@@ -90,22 +90,7 @@ strong {
 }
 
 strong {
-  position: relative;
-  // display: inline-block;
-  // line-height: 14px;
-  // border-bottom: 4px solid rgba(107,105,250,0.5);
-
-  &:after {
-    position: absolute;
-    bottom: 3px;
-    left: 0;
-    right: 0;
-    z-index: 10;
-    height: 5px;
-    background: #6b69fa;
-    opacity: 0.3;
-    content: '';
-  }
+  color: $primary-color;
 }
 
 /**
