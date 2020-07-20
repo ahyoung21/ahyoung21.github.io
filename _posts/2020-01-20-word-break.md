@@ -1,7 +1,8 @@
 ---
 layout: post
-title:  Word break
-date:   2020-01-20 15:01:35 +0300
+title: >
+    Word break
+tags: [word-break, normal, break-word, keep-all]
 ---
 
 작업을 하다보면 가볍게 이해한 속성을 바탕으로 관습적으로 사용하는 속성들이 있다.
