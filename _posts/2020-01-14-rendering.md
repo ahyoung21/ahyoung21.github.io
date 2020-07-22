@@ -9,7 +9,7 @@ title: >
 
 클라이언트가 브라우저 검색창에 주소를 치면 웹 서버는 해당 주소에 맞는 html문서를 내보낸다.
 
-{% include aligner.html images="pexels/posts/render_img0.png" column=1 %}
+{% include aligner.html images="pexels/posts/render_img0.PNG" column=1 %}
 
 해당 주소에 맞는 html문서를 내보낼 때에 렌더링 과정을 거치는데 대부분의 브라우저는 렌더링을 수행하는 렌더링 엔진(Rendering Engine)을 가지고 있다.
 
@@ -31,7 +31,7 @@ title: >
 
 아래는 Webkit 엔진 기준으로 설명한다.
 
-{% include aligner.html images="pexels/posts/render_img2.png" column=1 %}
+{% include aligner.html images="pexels/posts/render_img2.PNG" column=1 %}
 
 
 ### 1. 불러오기
@@ -44,7 +44,7 @@ title: >
 파싱이란 브라우저가 코드를 이해하고 사용할 수 있는 구조로 변환하는 작업이다.
 여기서 DOM TREE란 HTML 구조를 있는 그대로 표현하는 트리라고 할 수 있겠다.
 
-{% include aligner.html images="pexels/posts/render_img3.png" column=1 %}
+{% include aligner.html images="pexels/posts/render_img3.PNG" column=1 %}
 
 
 ### 3. CSSOM (CSS Object Model) 구축
@@ -52,7 +52,7 @@ title: >
 브라우저가 HTML을 파싱하는 과정에서 css파일을 불러오게 된다. css 파일을 불러온 뒤, HTML과 마찬가지로 브라우저가 이해하고 처리할 수 있는 형식으로 변환해야 한다.
 그 과정은 DOM을 생성하는 과정과 동일하다. 단 출력된 결과는 CSSOM(CSS Object Model) 이라고 부른다.
 
-{% include aligner.html images="pexels/posts/render_img4.png" column=1 %}
+{% include aligner.html images="pexels/posts/render_img4.PNG" column=1 %}
 
 ### 4. 렌더 트리 (Render Tree)
 
@@ -63,7 +63,7 @@ __이 두 개의 트리를 결합하여 렌더 트리를 생성__
 
 렌더 트리는 DOM 트리의 최상위 노드부터 각각의 노드를 탐색하여 렌더링에 필요한 노드들을 CSSOM 트리와 일치시켜 생성한다. 그리고 DOM 트리를 탐색하는 과정에서 렌더링 출력에 반영되지 않는 불필요한 노드들은 건너뛰게 된다. 예를들면 script 태그나, meta 태그 같은 것들이 있다. 또한 display:none 처럼 CSS를 통해 렌더링 출력에 반영되지 않는 노드들도 실제 화면에서 렌더링이 되지 않기 때문에 렌더 트리에서 제외된다. 다만 visibility:hidden 속성은 렌더 트리에 포함된다. 그 이유는 visibility:hidden 속성은 렌더링이 되더라도 여전히 레이아웃에서 공간을 차지하기 때문이다.
 
-{% include aligner.html images="pexels/posts/render_img5.png" column=1 %}
+{% include aligner.html images="pexels/posts/render_img5.PNG" column=1 %}
 
 ### 5. 레이아웃 처리
 
@@ -71,11 +71,11 @@ __이 두 개의 트리를 결합하여 렌더 트리를 생성__
 
 예를들어 CSS에 width:50% 로 정의되어 있다고 하면, 실제 브라우저에서 표현되는 정확한 사이즈는 계산되지 않았다는 의미이다.
 
-{% include aligner.html images="pexels/posts/render_img6.png" column=1 %}
+{% include aligner.html images="pexels/posts/render_img6.PNG" column=1 %}
 
 따라서 브라우저에 출력하기 전 실제 출력되는 정확한 위치와 크기를 계산하여야 한다. 그 단계가 레이아웃 (layout)이라고 한다. 이 단계에서는 각 객체의 정확한 위치 및 크기를 계산하기 위해 렌더 트리의 루트에서부터 탐색해 실제 픽셀 값을 구하여 박스 모델 (Box Model)을 출력한다.
 
-{% include aligner.html images="pexels/posts/render_img7.png" column=1 %}
+{% include aligner.html images="pexels/posts/render_img7.PNG" column=1 %}
 
 ### 6. 페인트
 
